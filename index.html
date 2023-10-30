@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elamaran- Portfolio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: hwb(61 31% 45%); 
+    }
+
+    header {
+        background-color: hsl(120, 4%, 5%);
+        color: hwb(110 5% 51%);
+        text-align: center;
+        padding: 2rem 0;
+        position: relative; 
+    }
+
+    .header-content h1 { 
+        font-size: 2.5rem;
+        color: hwb(0 0% 0%);
+    }
+
+    /*add styles for the round profile picture */
+    .profile-picture {
+        width: 200px; /* Adjust the size as needed*/
+        height: 200px;
+        border-radius: 75%; /* Create a circular shape */
+        object-fit: cover; /* To ensure the image fills the circular area */
+        position:fixed ; /* Add this */ 
+        top: 25px; /* Adjust top position as needed */
+        left: 75px; /* Adjust left position as needed */ 
+    }
+
+    nav {
+         background-color: #333; 
+         color: #df0909; 
+         text-align: center;
+    }
+
+    nav ul { 
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li { 
+        display: inline; 
+        margin: 0 20px;
+    }
+
+    nav ul li a { 
+        text-decoration: none;
+        color: #aeeb08;
+    }
+
+    .section-content {
+
+        background-color: rgb(150, 192, 155);
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(59, 179, 48, 0.815);
+    }
+
+   
+    
+
+   footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: hsl(0, 0%, 7%);
+        color: hsl(130, 96%, 50%);
+    }
+
+ul { 
+     list-style-type: disc; 
+      padding-left: 20px;
+    }
+
+    </style>
+ </head>
+<body>
+    <header>
+        <div class="header-content">
+            <!--Add your profile picture here -->
+        <img src="#" alt=" " class="profile-picture">
+        
+        <h1>Mr.ELAMARAN </h1>
+        <p>STUDENT</p>
+        <p> </p>
+
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+        </ul> 
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hi there! I'am Elamaran. A final year student with a passion for Computer Science.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>B.SC.</h2>
+            <p>Bharathidasan University - CS</p>
+            <h2> MCA</h2>
+            <p> Axen University in USA</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+
+                 <li>Python</li>
+                <li>Artificial Intelligence</li>
+                <li>Java course</li>
+                <li> PHP Language</li>
+                <li> Linux OS</li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2> My Projects</h2>
+            <ul>
+
+                 <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+           </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-content">
+            <h2>Contact</h2>
+            </ul>
+        
+
+                <li> Address :-</li>
+
+                <p> No:31L , New Street ,Athanakkottai</p>
+                <p> Pudukkottai .</p>
+
+                <li> Mobile Number==<a href="tel:">6382478735</a></li>
+
+                <p>  </p>
+               
+                
+                
+               
+                  
+        </div>
+    </section>
+
+    
+
+    <footer>
+         <p>&copy; 2023 Elamaran</p>
+    </footer>
+
+    <script>
+        document.quarySelectorAll('a{href^="#"}').forEach(anchor=> {
+        anchor.addEventListener('click',function(e) {
+        e.prevenDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+           if (targetElement) {
+                window.scrollTo({
+                top: targetElement.offsetTop, 
+                 behavior: 'smooth' 
+                });    
+        } }); });
+
+    </script>
+</body>
+</html>
+
